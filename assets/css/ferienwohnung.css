@@ -1,0 +1,536 @@
+/* ═══════════════════════════════════════════════════════════════════
+   FERIENWOHNUNG PAGE — Seitenspezifische Styles
+   Rosel's Mountain Lodge · Oberaudorf
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ── PAGE HERO ── */
+.page-hero {
+  position: relative;
+  min-height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--dark);
+}
+
+.page-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: url('../../Wohnung Bilder/balkon-kaiserblick.jpg');
+  background-size: cover;
+  background-position: center 35%;
+}
+
+.page-hero__gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(20,17,14,0.35) 0%,
+    rgba(20,17,14,0.55) 100%
+  );
+}
+
+.page-hero__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: calc(var(--nav-h) + 3rem) 1.5rem 4rem;
+  max-width: 800px;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(250,247,244,0.55);
+  margin-bottom: 1.8rem;
+}
+.breadcrumb a {
+  color: var(--gold);
+  transition: opacity 0.2s;
+}
+.breadcrumb a:hover { opacity: 0.75; }
+.breadcrumb i { font-size: 0.55rem; opacity: 0.5; }
+
+.page-hero__title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 7vw, 4.8rem);
+  font-weight: 300;
+  color: var(--cream);
+  line-height: 1.1;
+  margin-bottom: 1.2rem;
+  text-shadow: 0 2px 24px rgba(0,0,0,0.5);
+}
+.page-hero__title em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.page-hero__sub {
+  font-family: var(--font-sans);
+  font-size: clamp(0.82rem, 1.8vw, 0.95rem);
+  letter-spacing: 0.1em;
+  color: rgba(250,247,244,0.7);
+  margin-bottom: 2.5rem;
+  text-shadow: 0 1px 10px rgba(0,0,0,0.6);
+}
+
+.page-hero__actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.page-hero__scroll {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+/* ── OVERVIEW STRIP ── */
+.overview-strip {
+  background: var(--dark);
+  padding: 1.2rem 0;
+  border-bottom: 1px solid rgba(196,154,139,0.12);
+}
+
+.overview-strip__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.overview-item {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.9rem clamp(1.2rem, 3.5vw, 2.8rem);
+}
+.overview-item i {
+  font-size: 1.3rem;
+  color: var(--gold);
+}
+.overview-item strong {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--cream);
+  line-height: 1.15;
+}
+.overview-item span {
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(250,247,244,0.45);
+  display: block;
+}
+
+.overview-sep {
+  width: 1px;
+  height: 36px;
+  background: rgba(196,154,139,0.18);
+  flex-shrink: 0;
+}
+
+/* ── ROOMS ── */
+.rooms { background: var(--bg); }
+
+.room {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: center;
+  margin-bottom: clamp(4rem, 8vw, 7rem);
+}
+.room:last-child { margin-bottom: 0; }
+
+.room--image-left .room__visual { order: -1; }
+
+.room__text .section__eyebrow { color: var(--rose); }
+.room__text .section__title { margin-bottom: 1rem; }
+
+.room__body {
+  color: var(--ink-mid);
+  line-height: 1.85;
+  margin-bottom: 1.5rem;
+}
+
+.room__features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem 1.2rem;
+}
+.room__features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  font-size: 0.87rem;
+  color: var(--ink-mid);
+  line-height: 1.4;
+}
+.room__features i {
+  color: var(--gold);
+  font-size: 0.72rem;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.room__visual { position: relative; }
+
+.room__img-frame {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  border: 1px solid rgba(196,154,139,0.18);
+  box-shadow: 0 20px 60px rgba(30,27,24,0.1);
+}
+.room__img-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s var(--ease-out-expo);
+}
+.room__img-frame:hover img { transform: scale(1.03); }
+
+.room__img-frame--split { aspect-ratio: 4 / 3; }
+.room__img-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+  gap: 3px;
+}
+.room__img-top,
+.room__img-bottom {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.room__tag {
+  position: absolute;
+  bottom: 1.2rem;
+  left: 1.2rem;
+  background: rgba(30,27,24,0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(196,154,139,0.2);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* ── BALKON FULLWIDTH ── */
+.balcony-section {
+  position: relative;
+  min-height: 55vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    linear-gradient(rgba(20,17,14,0.45), rgba(20,17,14,0.65)),
+    url('../../Wohnung Bilder/balkon-aussicht.jpg') center 40% / cover no-repeat;
+  padding: var(--section-pad) 1.5rem;
+}
+.balcony-section__content {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ── BOOKING WIDGET (Smoobu) ── */
+.smoobu-widget-wrap {
+  background: #FAFAF8;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(196,154,139,0.2);
+  overflow: hidden;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 12px 60px rgba(30,27,24,0.08);
+}
+
+/* Trust-Bar */
+.booking-trust-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.85rem 2rem;
+  background: rgba(196,154,139,0.08);
+  border-bottom: 1px solid rgba(196,154,139,0.15);
+}
+
+.trust-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.75rem;
+  background: #fff;
+  border: 1px solid rgba(196,154,139,0.25);
+  border-radius: 100px;
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: var(--rose);
+  white-space: nowrap;
+  box-shadow: 0 1px 4px rgba(196,154,139,0.1);
+}
+.trust-chip i { font-size: 0.6rem; }
+
+/* Widget-Header */
+.booking-widget-header {
+  text-align: center;
+  padding: 2rem 2.5rem 1.5rem;
+  border-bottom: 1px solid rgba(196,154,139,0.12);
+}
+
+.booking-widget-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 300;
+  color: var(--ink);
+  line-height: 1.1;
+  margin-bottom: 0.6rem;
+}
+.booking-widget-title em {
+  font-style: italic;
+  color: var(--rose);
+}
+
+.booking-widget-subtitle {
+  font-size: 0.88rem;
+  color: var(--ink-mid);
+  line-height: 1.7;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.booking-widget-frame {
+  padding: 0.5rem 2rem 1rem;
+  min-height: 160px;
+}
+
+.booking-widget-footnote {
+  text-align: center;
+  padding: 0.8rem 2.5rem 1.2rem;
+  font-size: 0.76rem;
+  color: var(--ink-mid);
+  opacity: 0.55;
+  border-top: 1px solid rgba(196,154,139,0.1);
+}
+
+/* ── BUCHUNGSBEDINGUNGEN ── */
+.booking-terms {
+  background: var(--bg-alt);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  border: 1px solid rgba(196,154,139,0.15);
+}
+
+.booking-terms h3 {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--ink);
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(196,154,139,0.15);
+}
+
+.booking-terms__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.term-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  padding: 1.1rem 1.2rem;
+  background: var(--bg);
+  border: 1px solid rgba(196,154,139,0.14);
+  border-radius: var(--radius);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.term-item:hover {
+  border-color: rgba(196,154,139,0.3);
+  box-shadow: 0 4px 16px rgba(196,154,139,0.08);
+}
+.term-item i {
+  color: var(--gold);
+  font-size: 1rem;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+.term-item strong {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: 0.02em;
+  margin-bottom: 0.25rem;
+}
+.term-item p {
+  font-size: 0.83rem;
+  color: var(--ink-mid);
+  line-height: 1.6;
+  margin: 0;
+}
+.term-item small { font-size: 0.76rem; opacity: 0.75; }
+
+.term-item--service {
+  background: rgba(196,154,139,0.07);
+  border-color: rgba(196,154,139,0.22);
+}
+.term-item--storno {
+  grid-column: span 3;
+  background: rgba(255,230,150,0.06);
+  border-color: rgba(200,170,60,0.2);
+}
+.term-item--storno i { color: #b89a30; font-size: 1.1rem; }
+
+/* ── BTN OUTLINE (für helle Seiten-Hintergründe) ── */
+.btn--outline {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid rgba(30,27,24,0.28);
+}
+.btn--outline:hover {
+  border-color: var(--rose);
+  color: var(--rose);
+  transform: translateY(-2px);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .room {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .room--image-left .room__visual { order: 0; }
+  .booking-widget-header { padding: 1.8rem; }
+  .booking-widget-frame  { padding: 1.2rem; }
+}
+
+@media (max-width: 640px) {
+  .page-hero { min-height: 52vh; }
+  .overview-strip__inner { justify-content: flex-start; overflow-x: auto; }
+  .overview-item { padding: 0.8rem 1.2rem; }
+  .room__features { grid-template-columns: 1fr; }
+  .booking-widget-header { padding: 1.4rem 1.2rem; }
+  .booking-trust-bar { gap: 0.35rem; padding: 0.7rem 1rem; }
+  .booking-terms { padding: 1.5rem 1.2rem; }
+  .booking-terms__grid { grid-template-columns: 1fr 1fr; }
+  .term-item--storno { grid-column: 1 / -1; }
+}
+
+/* ── ANFAHRT ── */
+.anfahrt { background: var(--bg); }
+
+.anfahrt__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 3rem;
+  align-items: start;
+  margin-top: 3rem;
+}
+
+.anfahrt__info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.anfahrt__card {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1.1rem 1.3rem;
+  background: var(--bg-alt);
+  border-radius: 10px;
+  border: 1px solid rgba(196,154,139,0.15);
+}
+
+.anfahrt__card i {
+  color: var(--rose);
+  font-size: 1.1rem;
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+  width: 1.2rem;
+  text-align: center;
+}
+
+.anfahrt__card strong {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 0.3rem;
+}
+
+.anfahrt__card p {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--ink-mid);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.anfahrt__directions-btn {
+  margin-top: 0.4rem;
+  align-self: flex-start;
+}
+
+.anfahrt__map {
+  height: 460px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(30,27,24,0.12);
+  border: 1px solid rgba(196,154,139,0.2);
+}
+
+.anfahrt__map iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .anfahrt__grid {
+    grid-template-columns: 1fr;
+  }
+  .anfahrt__map {
+    height: 340px;
+  }
+}
