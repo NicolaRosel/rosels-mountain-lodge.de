@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /assets/
 
 Sitemap: https://www.rosels-mountain-lodge.de/sitemap.xml
