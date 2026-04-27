@@ -591,6 +591,16 @@ if (bookingForm) {
 
   if (btnAccept) btnAccept.addEventListener('click', () => { localStorage.setItem(CONSENT_KEY, 'granted'); banner.classList.remove('show'); loadGA(); });
   if (btnDeny)   btnDeny.addEventListener('click',   () => { localStorage.setItem(CONSENT_KEY, 'denied');  banner.classList.remove('show'); });
+
+  // Footer-Link "Cookie-Einstellungen": öffnet den Banner erneut
+  var settingsLink = document.getElementById('cookieSettingsLink');
+  if (settingsLink && banner) {
+    settingsLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      localStorage.removeItem(CONSENT_KEY);
+      banner.classList.add('show');
+    });
+  }
 })();
 
 // ── CONSOLE ───────────────────────────────────────────────────────────
