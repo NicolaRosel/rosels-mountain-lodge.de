@@ -462,7 +462,7 @@ body.cursor-gallery .cursor-follower {
 /* Hero Card */
 .hero__card {
   position: absolute;
-  top: 50%;
+  top: 42%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
@@ -529,6 +529,8 @@ body.cursor-gallery .cursor-follower {
   transform: scaleX(0);
 }
 
+.hero__card-tagline--short { display: none; }
+
 .hero__card-tagline {
   font-family: var(--font-serif);
   font-size: clamp(0.9rem, 1.2vw, 1.05rem);
@@ -545,7 +547,7 @@ body.cursor-gallery .cursor-follower {
   gap: 12px;
   justify-content: center;
   flex-wrap: nowrap;
-  margin-top: 1.8rem;
+  margin-top: 1.4rem;
 }
 
 .hero__card-btn {
@@ -1953,6 +1955,9 @@ body.cursor-gallery .cursor-follower {
 
 @media (max-width: 480px) {
   .hero__actions { flex-direction: column; align-items: center; }
+  .hero__card-actions { flex-wrap: wrap; }
+  .hero__card-tagline--long { display: none; }
+  .hero__card-tagline--short { display: block; opacity: 1; }
   .gallery__grid { grid-template-columns: 1fr; }
   .testimonials__nav { display: none; }
   .booking__form-wrap { padding: 1.5rem; }
