@@ -6,7 +6,7 @@
   <title>Ferienwohnung Oberaudorf mit Schwimmbad &amp; Sauna | Rosel's Mountain Lodge</title>
   <meta name="description" content="Ferienwohnung in Oberaudorf mit Hallenschwimmbad &amp; Finnischer Sauna direkt im Haus – kostenlos täglich 7–22 Uhr. Balkon mit Bergpanorama in den Bayerischen Alpen. Jetzt buchen!" />
   <link rel="canonical" href="https://www.rosels-mountain-lodge.de/" />
-  <link rel="preload" as="image" href="Wohnung%20Bilder/IMG_9790.JPG" fetchpriority="high" />
+  <link rel="preload" as="image" href="wohnung-bilder/IMG_9790.webp" type="image/webp" fetchpriority="high" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 
   <!-- Geo-Optimierung -->
@@ -21,14 +21,14 @@
   <meta property="og:url" content="https://www.rosels-mountain-lodge.de/" />
   <meta property="og:title" content="Ferienwohnung Oberaudorf mit Schwimmbad &amp; Sauna | Rosel's Mountain Lodge" />
   <meta property="og:description" content="Ferienwohnung in Oberaudorf mit Hallenschwimmbad &amp; Finnischer Sauna direkt im Haus – kostenlos täglich 7–22 Uhr. Balkon mit Kaisergebirge-Panorama." />
-  <meta property="og:image" content="https://www.rosels-mountain-lodge.de/Wohnung%20Bilder/balkon-aussicht.jpg" />
+  <meta property="og:image" content="https://www.rosels-mountain-lodge.de/wohnung-bilder/balkon-aussicht.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="de_DE" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Ferienwohnung Oberaudorf mit Schwimmbad &amp; Sauna | Rosel's Mountain Lodge" />
   <meta name="twitter:description" content="Ferienwohnung in Oberaudorf mit Hallenschwimmbad &amp; Finnischer Sauna direkt im Haus – kostenlos täglich 7–22 Uhr. Balkon mit Kaisergebirge-Panorama." />
-  <meta name="twitter:image" content="https://www.rosels-mountain-lodge.de/Wohnung%20Bilder/balkon-aussicht.jpg" />
+  <meta name="twitter:image" content="https://www.rosels-mountain-lodge.de/wohnung-bilder/balkon-aussicht.jpg" />
 
   <!-- Fonts & Icons (lokal gehostet) -->
   <link rel="stylesheet" href="assets/css/fonts.css" />
@@ -50,7 +50,7 @@
     "url": "https://www.rosels-mountain-lodge.de/",
     "telephone": "+491754174725",
     "email": "post@ferienwohnung-oberaudorf.bayern",
-    "image": "https://www.rosels-mountain-lodge.de/Wohnung%20Bilder/balkon-aussicht.jpg",
+    "image": "https://www.rosels-mountain-lodge.de/wohnung-bilder/balkon-aussicht.jpg",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Hoffeldring 8c",
@@ -276,7 +276,10 @@
           <div class="about__img-frame">
             <div class="about__img-inner">
               <div class="about__img-placeholder">
-                <img src="Wohnung Bilder/nicola-comic.png" alt="Rosel — Eure Gastgeberin" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" />
+                <picture>
+                  <source srcset="wohnung-bilder/nicola-comic.webp" type="image/webp">
+                  <img src="wohnung-bilder/nicola-comic.png" alt="Rosel — Eure Gastgeberin" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" />
+                </picture>
               </div>
             </div>
             <div class="about__img-tag">
@@ -382,8 +385,14 @@
           </div>
           <div class="apartment__card-visual">
             <div class="apt-illustration apt-illustration--split">
-              <img src="Wohnung Bilder/pool2.jpg" alt="Hallenschwimmbad" loading="lazy">
-              <img src="Wohnung Bilder/sauna.jpg" alt="Finnische Sauna" loading="lazy">
+              <picture>
+                <source srcset="wohnung-bilder/pool2.webp" type="image/webp">
+                <img src="wohnung-bilder/pool2.jpg" alt="Hallenschwimmbad" loading="lazy">
+              </picture>
+              <picture>
+                <source srcset="wohnung-bilder/sauna.webp" type="image/webp">
+                <img src="wohnung-bilder/sauna.jpg" alt="Finnische Sauna" loading="lazy">
+              </picture>
             </div>
           </div>
           <h3>Hallenschwimmbad &amp; Sauna — im Haus</h3>
@@ -503,6 +512,13 @@
           <button class="t-btn" id="tNext"><i class="fa-solid fa-arrow-right"></i></button>
         </div>
       </div>
+      <p class="testimonials__source reveal-up" style="text-align:center;margin-top:1.5rem;font-size:0.9rem;opacity:0.75;">
+        6 ausgewählte Stimmen aus insgesamt <strong>15 Bewertungen</strong> ·
+        Alle ansehen auf
+        <a href="https://www.google.com/search?q=Rosel%27s+Mountain+Lodge+Oberaudorf" target="_blank" rel="noopener"><i class="fa-brands fa-google" style="color:#4285F4"></i> Google</a>
+        &amp;
+        <a href="https://www.booking.com/hotel/de/rosels-mountain-lodge-oberaudorf.html" target="_blank" rel="noopener"><i class="fa-solid fa-b" style="color:#fff;background:#003580;padding:0.1rem 0.35rem;border-radius:3px;font-size:0.7rem"></i> Booking.com</a>
+      </p>
     </div>
   </section>
 
@@ -682,37 +698,55 @@
     <div class="gallery__grid">
       <div class="gallery__item gallery__item--tall reveal-up" style="--delay:0s">
         <div class="gallery__placeholder">
-          <img src="Wohnung Bilder/IMG_9786.JPG" alt="Schlaf- und Ruhezone der Ferienwohnung Oberaudorf" class="gallery__img" loading="lazy" style="object-position:center 40%">
+          <picture>
+            <source srcset="wohnung-bilder/IMG_9786.webp" type="image/webp">
+            <img src="wohnung-bilder/IMG_9786.JPG" alt="Schlaf- und Ruhezone der Ferienwohnung Oberaudorf" class="gallery__img" loading="lazy" style="object-position:center 40%">
+          </picture>
           <div class="gallery__overlay"><span>Schlaf- & Ruhezone</span></div>
         </div>
       </div>
       <div class="gallery__item reveal-up" style="--delay:0.1s">
         <div class="gallery__placeholder">
-          <img src="Wohnung Bilder/smart-tv-magenta.png" alt="Smart-TV mit Magenta TV im Wohnbereich" class="gallery__img" loading="lazy">
+          <picture>
+            <source srcset="wohnung-bilder/smart-tv-magenta.webp" type="image/webp">
+            <img src="wohnung-bilder/smart-tv-magenta.png" alt="Smart-TV mit Magenta TV im Wohnbereich" class="gallery__img" loading="lazy">
+          </picture>
           <div class="gallery__overlay"><span>Wohnen & Entspannen</span></div>
         </div>
       </div>
       <div class="gallery__item reveal-up" style="--delay:0.2s">
         <div class="gallery__placeholder">
-          <img src="Wohnung Bilder/IMG_9788.JPG" alt="Modernes Badezimmer mit Regendusche und Fußbodenheizung" class="gallery__img" loading="lazy" style="object-position:center top">
+          <picture>
+            <source srcset="wohnung-bilder/IMG_9788.webp" type="image/webp">
+            <img src="wohnung-bilder/IMG_9788.JPG" alt="Modernes Badezimmer mit Regendusche und Fußbodenheizung" class="gallery__img" loading="lazy" style="object-position:center top">
+          </picture>
           <div class="gallery__overlay"><span>Badezimmer</span></div>
         </div>
       </div>
       <div class="gallery__item gallery__item--wide reveal-up" style="--delay:0.3s">
         <div class="gallery__placeholder">
-          <img src="Wohnung Bilder/IMG_9800.JPG" alt="Balkon mit Kaisergebirge-Panorama in Oberaudorf" class="gallery__img" loading="lazy">
+          <picture>
+            <source srcset="wohnung-bilder/IMG_9800.webp" type="image/webp">
+            <img src="wohnung-bilder/IMG_9800.JPG" alt="Balkon mit Kaisergebirge-Panorama in Oberaudorf" class="gallery__img" loading="lazy">
+          </picture>
           <div class="gallery__overlay"><span>Balkon mit Bergpanorama</span></div>
         </div>
       </div>
       <div class="gallery__item reveal-up" style="--delay:0.4s">
         <div class="gallery__placeholder">
-          <img src="Wohnung Bilder/IMG_9791.JPG" alt="Vollausgestattete Küche der Ferienwohnung" class="gallery__img" loading="lazy">
+          <picture>
+            <source srcset="wohnung-bilder/IMG_9791.webp" type="image/webp">
+            <img src="wohnung-bilder/IMG_9791.JPG" alt="Vollausgestattete Küche der Ferienwohnung" class="gallery__img" loading="lazy">
+          </picture>
           <div class="gallery__overlay"><span>Die Küche</span></div>
         </div>
       </div>
       <div class="gallery__item gallery__item--wide reveal-up" style="--delay:0.5s">
         <div class="gallery__placeholder">
-          <img src="Wohnung Bilder/gebaeude-hinten.jpg" alt="Ferienhaus in Oberaudorf am Kaisergebirge" class="gallery__img" loading="lazy" style="object-position:center 40%">
+          <picture>
+            <source srcset="wohnung-bilder/gebaeude-hinten.webp" type="image/webp">
+            <img src="wohnung-bilder/gebaeude-hinten.jpg" alt="Ferienhaus in Oberaudorf am Kaisergebirge" class="gallery__img" loading="lazy" style="object-position:center 40%">
+          </picture>
           <div class="gallery__overlay"><span>Das Haus in Oberaudorf</span></div>
         </div>
       </div>
