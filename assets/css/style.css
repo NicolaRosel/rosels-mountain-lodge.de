@@ -1903,6 +1903,138 @@ body.cursor-gallery .cursor-follower {
 }
 .faq__a a { color: var(--rose); }
 
+/* ═════════════════════════════════════════════════════════════
+   ── RABATT-AKTION (zeitlich befristet, einfach entfernbar) ──
+   Suchbar als "DISCOUNT-" in HTML/CSS → komplett rückbaubar
+   ═════════════════════════════════════════════════════════════ */
+.hero__discount {
+  position: absolute;
+  top: -32px;
+  right: -32px;
+  width: 124px;
+  height: 124px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--rose) 0%, #b08572 100%);
+  color: var(--cream);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: var(--font-sans);
+  transform: rotate(6deg);
+  box-shadow: 0 10px 28px rgba(20,17,14,0.45), inset 0 0 0 2px rgba(255,255,255,0.15);
+  z-index: 4;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  animation: discountPulse 3.2s ease-in-out infinite;
+}
+.hero__discount:hover {
+  transform: rotate(0deg) scale(1.06);
+  box-shadow: 0 14px 36px rgba(20,17,14,0.55), inset 0 0 0 2px rgba(255,255,255,0.25);
+}
+.hero__discount-percent {
+  font-family: var(--font-serif);
+  font-size: 1.85rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.hero__discount-label {
+  font-size: 0.52rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin-top: 0.35rem;
+  opacity: 0.95;
+}
+.hero__discount-code {
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  margin-top: 0.3rem;
+  padding: 0.18rem 0.45rem;
+  background: rgba(255,255,255,0.18);
+  border-radius: 2px;
+}
+@keyframes discountPulse {
+  0%, 100% { transform: rotate(6deg) scale(1); }
+  50%      { transform: rotate(6deg) scale(1.04); }
+}
+@media (max-width: 700px) {
+  .hero__discount {
+    width: 88px;
+    height: 88px;
+    top: -18px;
+    right: -14px;
+  }
+  .hero__discount-percent { font-size: 1.25rem; }
+  .hero__discount-label  { font-size: 0.42rem; letter-spacing: 0.12em; margin-top: 0.2rem; }
+  .hero__discount-code   { font-size: 0.5rem; padding: 0.14rem 0.35rem; margin-top: 0.2rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero__discount { animation: none; }
+}
+
+/* Highlight-Variante eines booking__info-item */
+.booking__info-item--discount {
+  background: linear-gradient(135deg, rgba(196,154,139,0.12), rgba(196,154,139,0.04));
+  border-left: 3px solid var(--rose);
+  padding: 0.9rem 1rem;
+  border-radius: 4px;
+}
+.booking__info-item--discount strong { color: var(--rose); }
+.discount-code-pill {
+  display: inline-block;
+  background: var(--rose);
+  color: var(--cream);
+  padding: 0.1rem 0.55rem;
+  border-radius: 3px;
+  font-family: var(--font-sans);
+  letter-spacing: 0.06em;
+  font-size: 0.85em;
+  font-weight: 600;
+}
+
+/* FAQ-Hinweis für Rabatt */
+.faq__discount-hint {
+  display: block;
+  margin-top: 0.6rem;
+  padding: 0.6rem 0.8rem;
+  background: rgba(196,154,139,0.1);
+  border-left: 2px solid var(--rose);
+  color: var(--rose);
+  font-weight: 500;
+  font-size: 0.92rem;
+}
+
+/* Banner unter dem Section-Header auf /ferienwohnung */
+.discount-banner {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin: 1.4rem auto 0;
+  padding: 0.7rem 1.2rem;
+  background: linear-gradient(135deg, rgba(196,154,139,0.15), rgba(196,154,139,0.06));
+  border: 1px solid rgba(196,154,139,0.4);
+  border-radius: 100px;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--ink);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.discount-banner__icon { font-size: 1.2rem; }
+.discount-banner__text strong { color: var(--rose); }
+@media (max-width: 600px) {
+  .discount-banner {
+    font-size: 0.82rem;
+    padding: 0.6rem 1rem;
+    border-radius: 12px;
+  }
+}
+
 /* ── BACK TO TOP ── */
 .back-to-top {
   position: fixed;
