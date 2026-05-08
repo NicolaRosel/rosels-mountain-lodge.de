@@ -31,9 +31,11 @@
 
   <!-- Fonts & Icons (lokal gehostet) -->
   <link rel="stylesheet" href="assets/css/fonts.css" />
-  <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
+  <link rel="preload" href="assets/css/fontawesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="assets/css/fontawesome.min.css" /></noscript>
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/ferienwohnung.css" />
+  <link rel="preconnect" href="https://login.smoobu.com" />
 
   <!-- Strukturierte Daten (JSON-LD) -->
   <script type="application/ld+json">
