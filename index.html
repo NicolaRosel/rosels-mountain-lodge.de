@@ -31,10 +31,10 @@
   <meta name="twitter:image" content="https://www.rosels-mountain-lodge.de/wohnung-bilder/balkon-aussicht.jpg" />
 
   <!-- Fonts & Icons (lokal gehostet) -->
-  <link rel="stylesheet" href="assets/css/fonts.css?v=20260508" />
-  <link rel="preload" href="assets/css/fontawesome.min.css?v=20260508" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link rel="stylesheet" href="assets/css/fontawesome.min.css?v=20260508" /></noscript>
-  <link rel="stylesheet" href="assets/css/style.css?v=20260508" />
+  <link rel="stylesheet" href="assets/css/fonts.css?v=20260508b" />
+  <link rel="preload" href="assets/css/fontawesome.min.css?v=20260508b" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="assets/css/fontawesome.min.css?v=20260508b" /></noscript>
+  <link rel="stylesheet" href="assets/css/style.css?v=20260508b" />
 
   <!-- Premium Animation Libraries (defer = nicht render-blockierend) -->
   <script src="assets/js/vendor/lenis.min.js" defer></script>
@@ -205,8 +205,8 @@
 
     <div class="hero__card">
       <!-- DISCOUNT-BADGE-START — entfernen, sobald Buchungslage gut -->
-      <a href="ferienwohnung.html#buchung" class="hero__discount" aria-label="15 Prozent Rabatt mit Code RABATT15 bei Direktbuchung">
-        <span class="hero__discount-percent">−15%</span>
+      <a href="ferienwohnung.html#buchung" class="hero__discount" aria-label="15 Prozent Rabatt mit Code RABATT15 bei Direktbuchung. Bedingungen siehe FAQ.">
+        <span class="hero__discount-percent">−15%<sup class="hero__discount-star" aria-hidden="true">*</sup></span>
         <span class="hero__discount-label">Direktbuchung</span>
         <span class="hero__discount-code">RABATT15</span>
       </a>
@@ -777,10 +777,36 @@
           <div class="faq__a">
             <p>Der Preis startet ab <strong>€ 90 pro Nacht</strong> für 2 Personen (Nebensaison). In der Hauptsaison variieren die Preise je nach Zeitraum — aktuell verfügbare Preise und freie Termine seht ihr direkt im Buchungskalender. Zusätzlich fällt einmalig eine Servicepauschale von € 70 an (inkl. Endreinigung, Bettwäsche, Handtücher & Bademäntel). Die Kurtaxe (€ 2,00 / Nacht / Gast ab 16 Jahren) ist nicht im Buchungspreis enthalten und wird bei Anreise beglichen.</p>
             <!-- DISCOUNT-FAQ-START — entfernen, sobald Buchungslage gut -->
-            <span class="faq__discount-hint">🎁 Aktuell: 15 % Rabatt mit Code <strong>RABATT15</strong> bei Direktbuchung — z.&nbsp;B. statt € 90 nur <strong>€ 76,50</strong> pro Nacht.</span>
+            <span class="faq__discount-hint">🎁 Aktuell: 15 % Rabatt mit Code <strong>RABATT15</strong> bei Direktbuchung — z.&nbsp;B. statt € 90 nur <strong>€ 76,50</strong> pro Nacht. <a href="#faq-rabatt" class="faq__discount-link">Bedingungen ansehen</a></span>
             <!-- DISCOUNT-FAQ-END -->
           </div>
         </div>
+
+        <!-- DISCOUNT-FAQ-ITEM-START — entfernen, sobald Buchungslage gut -->
+        <div class="faq__item" id="faq-rabatt">
+          <button class="faq__q" aria-expanded="false">
+            <span>Wie funktioniert der Rabattcode RABATT15?</span>
+            <i class="fa-solid fa-plus faq__icon" aria-hidden="true"></i>
+          </button>
+          <div class="faq__a">
+            <p>Mit dem Code <strong>RABATT15</strong> erhaltet ihr <strong>15 % Rabatt</strong> auf eure Direktbuchung über diese Website.</p>
+            <p><strong>So löst ihr ihn ein:</strong></p>
+            <ul style="padding-left:1.2rem; line-height:1.8; color:var(--ink-mid); font-size:0.92rem; margin-bottom:1rem;">
+              <li>Wählt im Buchungskalender euren Wunschzeitraum</li>
+              <li>Tragt im Feld „Rabattcode" den Code <strong>RABATT15</strong> ein, <strong>bevor ihr die Buchung abschließt</strong></li>
+              <li>Der Rabatt wird automatisch von der Endsumme abgezogen</li>
+            </ul>
+            <p><strong>Bitte beachtet:</strong></p>
+            <ul style="padding-left:1.2rem; line-height:1.8; color:var(--ink-mid); font-size:0.92rem;">
+              <li>Gültig <strong>nur bei Direktbuchung</strong> über diese Website — nicht für Buchungen über Booking.com, Airbnb oder andere Portale</li>
+              <li>Code muss <strong>vor Abschluss der Buchung</strong> im Buchungsformular eingegeben werden — eine nachträgliche Verrechnung oder Erstattung ist <strong>ausgeschlossen</strong></li>
+              <li>Nicht mit weiteren Aktionen oder Rabatten kombinierbar</li>
+              <li>Nicht auf Bargeld auszahlbar, nicht übertragbar</li>
+              <li>Aktion zeitlich begrenzt — wir behalten uns vor, sie jederzeit ohne Vorankündigung zu beenden</li>
+            </ul>
+          </div>
+        </div>
+        <!-- DISCOUNT-FAQ-ITEM-END -->
 
         <div class="faq__item">
           <button class="faq__q" aria-expanded="false">
@@ -906,10 +932,11 @@
           <div class="booking__info-list">
             <!-- DISCOUNT-BENEFIT-START — entfernen, sobald Buchungslage gut -->
             <div class="booking__info-item booking__info-item--discount reveal-left">
-              <i class="fa-solid fa-tag"></i>
+              <i class="fa-solid fa-tag" aria-hidden="true"></i>
               <div>
                 <strong>15 % Rabatt mit Code <span class="discount-code-pill">RABATT15</span></strong>
-                <span>Bei Direktbuchung über unsere Website — Code einfach im Buchungskalender unter „Rabattcode" eingeben, der Rabatt wird automatisch abgezogen.</span>
+                <span>Bei Direktbuchung über unsere Website — Code einfach im Buchungsformular unter „Rabattcode" eingeben, der Rabatt wird automatisch abgezogen.</span>
+                <small class="discount-terms">* Nur bei Direktbuchung. Code muss vor Abschluss der Buchung eingegeben werden — nachträglich nicht einlösbar. <a href="#faq-rabatt">Vollständige Bedingungen</a></small>
               </div>
             </div>
             <!-- DISCOUNT-BENEFIT-END -->

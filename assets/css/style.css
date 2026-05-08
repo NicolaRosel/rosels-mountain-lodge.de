@@ -2028,6 +2028,47 @@ body.cursor-gallery .cursor-follower {
   font-size: 0.92rem;
 }
 
+/* Stern-Symbol auf dem Hero-Badge */
+.hero__discount-star {
+  font-size: 0.55em;
+  margin-left: 0.05em;
+  opacity: 0.85;
+  font-weight: 600;
+}
+
+/* Mini-Disclaimer unter Discount-Elementen */
+.discount-terms {
+  display: block;
+  margin-top: 0.7rem;
+  font-size: 0.72rem;
+  color: var(--ink-mid);
+  opacity: 0.72;
+  line-height: 1.5;
+  font-family: var(--font-sans);
+}
+.discount-terms a {
+  color: var(--rose);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.discount-terms--center {
+  text-align: center;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.5rem;
+}
+
+/* Inline-Link im FAQ-Hint */
+.faq__discount-link {
+  color: var(--rose);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+  margin-left: 0.3rem;
+  white-space: nowrap;
+}
+
 /* Banner unter dem Section-Header auf /ferienwohnung */
 .discount-banner {
   display: inline-flex;
