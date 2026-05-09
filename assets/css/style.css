@@ -433,8 +433,7 @@ body.cursor-gallery .cursor-follower {
 .hero__parallax-bg {
   position: absolute;
   inset: 0;
-  background-image: url('../../wohnung-bilder/IMG_9790.JPG');
-  background-image: image-set(url('../../wohnung-bilder/IMG_9790.webp') type('image/webp'), url('../../wohnung-bilder/IMG_9790.JPG') type('image/jpeg'));
+  background-image: url('../../wohnung-bilder/IMG_9790.webp');
   background-size: cover;
   background-position: center 30%;
   z-index: 0;
@@ -1128,38 +1127,31 @@ body.cursor-gallery .cursor-follower {
   object-position: center 80%;
 }
 .apt-illustration.bedroom {
-  background-image: url('../../wohnung-bilder/IMG_9787.JPG');
-  background-image: image-set(url('../../wohnung-bilder/IMG_9787.webp') type('image/webp'), url('../../wohnung-bilder/IMG_9787.JPG') type('image/jpeg'));
+  background-image: url('../../wohnung-bilder/IMG_9787.webp');
 }
 .apt-illustration.living {
-  background-image: url('../../wohnung-bilder/IMG_9826.JPG');
-  background-image: image-set(url('../../wohnung-bilder/IMG_9826.webp') type('image/webp'), url('../../wohnung-bilder/IMG_9826.JPG') type('image/jpeg'));
+  background-image: url('../../wohnung-bilder/IMG_9826.webp');
   background-position: center;
 }
 .apt-illustration.kitchen {
-  background-image: url('../../wohnung-bilder/IMG_9791.JPG');
-  background-image: image-set(url('../../wohnung-bilder/IMG_9791.webp') type('image/webp'), url('../../wohnung-bilder/IMG_9791.JPG') type('image/jpeg'));
+  background-image: url('../../wohnung-bilder/IMG_9791.webp');
 }
 .apt-illustration.pool {
-  background-image: url('../../wohnung-bilder/pool.jpg');
-  background-image: image-set(url('../../wohnung-bilder/pool.webp') type('image/webp'), url('../../wohnung-bilder/pool.jpg') type('image/jpeg'));
+  background-image: url('../../wohnung-bilder/pool.webp');
   background-size: cover;
   background-position: center 65%;
 }
 .apt-illustration.sauna {
-  background-image: url('../../wohnung-bilder/sauna.jpg');
-  background-image: image-set(url('../../wohnung-bilder/sauna.webp') type('image/webp'), url('../../wohnung-bilder/sauna.jpg') type('image/jpeg'));
+  background-image: url('../../wohnung-bilder/sauna.webp');
   background-size: cover;
   background-position: center;
 }
 .apt-illustration.balcony {
-  background-image: url('../../wohnung-bilder/balkon-aussicht.jpg');
-  background-image: image-set(url('../../wohnung-bilder/balkon-aussicht.webp') type('image/webp'), url('../../wohnung-bilder/balkon-aussicht.jpg') type('image/jpeg'));
+  background-image: url('../../wohnung-bilder/balkon-aussicht.webp');
   background-position: center 40%;
 }
 .apt-illustration.bath {
-  background-image: url('../../wohnung-bilder/IMG_9788.JPG');
-  background-image: image-set(url('../../wohnung-bilder/IMG_9788.webp') type('image/webp'), url('../../wohnung-bilder/IMG_9788.JPG') type('image/jpeg'));
+  background-image: url('../../wohnung-bilder/IMG_9788.webp');
 }
 
 .apartment__card h3 {
@@ -1389,34 +1381,28 @@ body.cursor-gallery .cursor-follower {
 
 /* Gallery image backgrounds — now on .gallery__img */
 .gal-1 {
-  background-image: url('../../wohnung-bilder/IMG_9786.JPG');
-  background-image: image-set(url('../../wohnung-bilder/IMG_9786.webp') type('image/webp'), url('../../wohnung-bilder/IMG_9786.JPG') type('image/jpeg'));
+  background-image: url('../../wohnung-bilder/IMG_9786.webp');
   background-position: center 40%;
 }
 .gal-2 {
-  background-image: url('../../wohnung-bilder/smart-tv-magenta.png');
-  background-image: image-set(url('../../wohnung-bilder/smart-tv-magenta.webp') type('image/webp'), url('../../wohnung-bilder/smart-tv-magenta.png') type('image/png'));
+  background-image: url('../../wohnung-bilder/smart-tv-magenta.webp');
 }
 .gal-3 {
-  background-image: url('../../wohnung-bilder/IMG_9788.JPG');
-  background-image: image-set(url('../../wohnung-bilder/IMG_9788.webp') type('image/webp'), url('../../wohnung-bilder/IMG_9788.JPG') type('image/jpeg'));
+  background-image: url('../../wohnung-bilder/IMG_9788.webp');
   background-position: center top;
 }
 .gal-4 {
-  background-image: url('../../wohnung-bilder/IMG_9800.JPG');
-  background-image: image-set(url('../../wohnung-bilder/IMG_9800.webp') type('image/webp'), url('../../wohnung-bilder/IMG_9800.JPG') type('image/jpeg'));
+  background-image: url('../../wohnung-bilder/IMG_9800.webp');
   background-size: cover;
   background-position: center;
 }
 .gal-5 {
-  background-image: url('../../wohnung-bilder/IMG_9791.JPG');
-  background-image: image-set(url('../../wohnung-bilder/IMG_9791.webp') type('image/webp'), url('../../wohnung-bilder/IMG_9791.JPG') type('image/jpeg'));
+  background-image: url('../../wohnung-bilder/IMG_9791.webp');
   background-size: cover;
   background-position: center;
 }
 .gal-6 {
-  background-image: url('../../wohnung-bilder/gebaeude-hinten.jpg');
-  background-image: image-set(url('../../wohnung-bilder/gebaeude-hinten.webp') type('image/webp'), url('../../wohnung-bilder/gebaeude-hinten.jpg') type('image/jpeg'));
+  background-image: url('../../wohnung-bilder/gebaeude-hinten.webp');
   background-size: cover;
   background-position: center 40%;
 }
