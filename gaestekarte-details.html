@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oberaudorfer Gästekarte — Alle Leistungen | Rosel's Mountain Lodge</title>
+  <meta name="description" content="Oberaudorfer Gästekarte: Kostenlose Leistungen wie MVV-Fahrkarte, Innfähre, Wanderungen & Museum. Plus Rabatte bei über 30 Partnern in der Region." />
+  <link rel="canonical" href="https://rosels-mountain-lodge.de/gaestekarte-details.html" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+  <!-- Fonts & Icons (lokal gehostet) -->
+  <link rel="stylesheet" href="assets/css/fonts.css" />
+  <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Premium Animation Libraries -->
+  <script defer src="assets/js/vendor/lenis.min.js"></script>
+  <script defer src="assets/js/vendor/gsap.min.js"></script>
+  <script defer src="assets/js/vendor/ScrollTrigger.min.js"></script>
+
+  <style>
+    .gc-hero {
+      background: linear-gradient(135deg, var(--rose) 0%, rgba(196,154,139,0.8) 100%);
+      padding: 4rem 0;
+      color: white;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .gc-hero h1 {
+      font-family: var(--font-serif);
+      font-size: 2.5rem;
+      font-weight: 300;
+      margin: 1rem 0;
+      line-height: 1.3;
+    }
+
+    .gc-hero p {
+      font-family: var(--font-sans);
+      font-size: 1.1rem;
+      margin: 1rem 0 0;
+      opacity: 0.95;
+    }
+
+    .gc-breadcrumb {
+      text-align: center;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .gc-breadcrumb a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+    }
+
+    .gc-breadcrumb a:hover {
+      text-decoration: underline;
+    }
+
+    .gc-category {
+      margin-bottom: 4rem;
+    }
+
+    .gc-category-title {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      font-weight: 300;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .gc-category-subtitle {
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      color: var(--ink-mid);
+      margin-bottom: 2rem;
+      font-weight: 400;
+    }
+
+    .gc-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .gc-item {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      border-left: 4px solid var(--rose);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gc-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+    .gc-item-title {
+      font-family: var(--font-sans);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 0.6rem;
+    }
+
+    .gc-item-desc {
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      color: var(--ink-mid);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .gc-item-badge {
+      display: inline-block;
+      background: rgba(196,154,139,0.15);
+      color: var(--rose);
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-top: 0.8rem;
+    }
+
+    .gc-disclaimer {
+      background: rgba(196,154,139,0.08);
+      border-left: 4px solid var(--rose);
+      padding: 1.5rem;
+      border-radius: 8px;
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      color: var(--ink-mid);
+      line-height: 1.6;
+      margin-top: 2rem;
+    }
+
+    .gc-cta {
+      text-align: center;
+      margin-top: 3rem;
+      padding-top: 3rem;
+      border-top: 1px solid rgba(196,154,139,0.2);
+    }
+
+    .gc-cta-btn {
+      display: inline-block;
+      background: var(--rose);
+      color: white;
+      padding: 0.9rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-family: var(--font-sans);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background 0.3s ease;
+    }
+
+    .gc-cta-btn:hover {
+      background: rgba(196,154,139,0.9);
+    }
+
+    .gc-info-box {
+      background: linear-gradient(135deg, rgba(196,154,139,0.08) 0%, rgba(196,154,139,0.03) 100%);
+      padding: 2rem;
+      border-radius: 12px;
+      margin-bottom: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      .gc-hero h1 {
+        font-size: 2rem;
+      }
+
+      .gc-category-title {
+        font-size: 1.4rem;
+      }
+
+      .gc-items {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation (kopiert von index.html) -->
+  <nav class="navbar">
+    <div class="navbar__container">
+      <a href="index.html" class="navbar__logo">
+        <span style="font-family: var(--font-serif); font-size: 1.3rem; font-weight: 300;">Rosel's</span>
+      </a>
+      <ul class="navbar__menu">
+        <li><a href="index.html">Startseite</a></li>
+        <li><a href="index.html#gaestekarte">Gästekarte</a></li>
+        <li><a href="ferienwohnung.html">Wohnung</a></li>
+        <li><a href="index.html#kontakt">Kontakt</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="gc-hero">
+    <div class="container">
+      <div class="gc-breadcrumb">
+        <a href="index.html">Startseite</a> / <span>Gästekarte Details</span>
+      </div>
+      <h1>Oberaudorfer Gästekarte</h1>
+      <p>Alle kostenlosen Leistungen & Rabatte auf einen Blick</p>
+      <p style="font-size: 0.9rem; margin-top: 1.5rem; opacity: 0.85;">
+        <i class="fa-solid fa-calendar"></i> Stand: Juni 2026 — Quelle: Tourist-Information Oberaudorf
+      </p>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <main class="container" style="max-width: 1000px; padding: 0 2rem;">
+
+    <!-- Intro Box -->
+    <div class="gc-info-box">
+      <p style="font-family: var(--font-sans); font-size: 1rem; color: var(--ink); line-height: 1.8; margin: 0;">
+        <strong>Die Gästekarte der Tourist-Information Oberaudorf bietet dir eine Vielzahl von Vorteilen bei Aktivitäten und Leistungsträgern in der Region.</strong> Mit deiner kostenlosen Gästekarte profitierst du von exklusiven Vergünstigungen und freien Eintritten an zahlreichen Attraktionen.
+      </p>
+    </div>
+
+    <!-- Umgebung Highlight -->
+    <div style="background: linear-gradient(135deg, rgba(196,154,139,0.15) 0%, rgba(196,154,139,0.05) 100%); border-left: 4px solid var(--rose); padding: 1.5rem; border-radius: 8px; margin-bottom: 3rem;">
+      <p style="font-family: var(--font-sans); font-size: 0.95rem; color: var(--ink); line-height: 1.7; margin: 0;">
+        <i class="fa-solid fa-star" style="color: var(--rose); margin-right: 0.6rem;"></i>
+        <strong>Noch mehr Ermäßigungen im Chiemgau-Alpenland und im Chiemgau:</strong><br/>
+        Mit deiner Gästekarte erhältst du viele weitere Leistungen in der gesamten Region. Eine vollständige Übersicht findest du in der Tourist-Information Oberaudorf oder erhältst sie von deinem Gastgeber.
+      </p>
+    </div>
+
+    <!-- KOSTENLOS Section -->
+    <section class="gc-category">
+      <h2 class="gc-category-title">
+        <i class="fa-solid fa-ticket" style="color: var(--rose); font-size: 1.5rem;"></i>
+        Kostenlos enthalten
+      </h2>
+      <p class="gc-category-subtitle">Diese Leistungen sind mit deiner Gästekarte vollständig kostenlos</p>
+
+      <div class="gc-items">
+        <!-- MVV -->
+        <div class="gc-item">
+          <div class="gc-item-title">
+            <i class="fa-solid fa-bus" style="color: var(--rose); margin-right: 0.5rem;"></i>
+            Bus & Bahn MVV
+          </div>
+          <p class="gc-item-desc">
+            Ab <strong>01. Juli 2026</strong>: Kostenlose Fahrkarte für das komplette Bus- und Bahnnetz des Münchner Verkehrsverbunds in den Zonen 5–12. Perfekt um die Region ohne Auto zu erkunden.
+          </p>
+          <span class="gc-item-badge">NEU ab 01.07.2026</span>
+        </div>
+
+        <!-- Innfähre -->
+        <div class="gc-item">
+          <div class="gc-item-title">
+            <i class="fa-solid fa-water" style="color: var(--rose); margin-right: 0.5rem;"></i>
+            Innfähre Kiefersfelden
+          </div>
+          <p class="gc-item-desc">
+            Kostenlose Überfahrt mit der Innfähre Kiefersfelden. Ein besonderes Naturerlebnis über die Iinn — ideal für Wanderungen und Ausflüge.
+          </p>
+        </div>
+
+        <!-- Museum -->
+        <div class="gc-item">
+          <div class="gc-item-title">
+            <i class="fa-solid fa-landmark" style="color: var(--rose); margin-right: 0.5rem;"></i>
+            Audorfer Museum
+          </div>
+          <p class="gc-item-desc">
+            Freier Eintritt in das Audorfer Museum im Burgtor. Entdecke die Geschichte und Kultur Oberaudorfs.
+          </p>
+        </div>
+
+        <!-- Wanderungen -->
+        <div class="gc-item">
+          <div class="gc-item-title">
+            <i class="fa-solid fa-person-hiking" style="color: var(--rose); margin-right: 0.5rem;"></i>
+            Geführte Wanderungen
+          </div>
+          <p class="gc-item-desc">
+            Kostenlose Teilnahme an geführten Wanderungen in der Region. Im Winter auch Fackelwanderungen für ein unvergessliches Erlebnis.
+          </p>
+        </div>
+
+        <!-- Karten & Infos -->
+        <div class="gc-item">
+          <div class="gc-item-title">
+            <i class="fa-solid fa-map" style="color: var(--rose); margin-right: 0.5rem;"></i>
+            Karten & Informationen
+          </div>
+          <p class="gc-item-desc">
+            Kostenlose Übersichtskarten, Wander- und Ortspläne sowie weitere Infobroschufen in der Tourist-Information.
+          </p>
+        </div>
+
+        <!-- Shuttle -->
+        <div class="gc-item">
+          <div class="gc-item-title">
+            <i class="fa-solid fa-van-shuttle" style="color: var(--rose); margin-right: 0.5rem;"></i>
+            Sommer-Shuttle
+          </div>
+          <p class="gc-item-desc">
+            Im Sommer: Kostenlose Ausflugsbuslinien zwischen Niederaudorf – Oberaudorf – Kiefersfelden für deine Tagesausflüge.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RABATTE Section -->
+    <section class="gc-category">
+      <h2 class="gc-category-title">
+        <i class="fa-solid fa-percentage" style="color: var(--rose); font-size: 1.5rem;"></i>
+        Rabatte & Vergünstigungen
+      </h2>
+      <p class="gc-category-subtitle">Mit deiner Gästekarte sparst du bei diesen Partnern</p>
+
+      <!-- Oberaudorf -->
+      <h3 style="font-family: var(--font-sans); font-size: 1.2rem; color: var(--ink); margin: 2.5rem 0 1rem; margin-top: 3rem; font-weight: 600;">
+        <i class="fa-solid fa-location-dot" style="color: var(--rose); margin-right: 0.6rem;"></i>
+        In Oberaudorf
+      </h3>
+      <div class="gc-items">
+        <div class="gc-item">
+          <div class="gc-item-title">Bergbahn Hitchcock</div>
+          <p class="gc-item-desc">Einzelfahrten zum ermäßigten Tarif (Berg-, Berg-Talfahrt, Talfahrt)</p>
+        </div>
+        <div class="gc-item">
+          <div class="gc-item-title">Bücherei</div>
+          <p class="gc-item-desc">Leihgebühr nur 0,50 € pro Medium/Woche</p>
+        </div>
+        <div class="gc-item">
+          <div class="gc-item-title">Cassa Radel Wilder Kaiser</div>
+          <p class="gc-item-desc">10 % Rabatt</p>
+        </div>
+        <div class="gc-item">
+          <div class="gc-item-title">Hotel Feuriger Tatzlwurm</div>
+          <p class="gc-item-desc">Ab Ende Oktober 2026: Wellnessbereich zum ermäßigten Preis (Voranmeldung erforderlich)</p>
+        </div>
+      </div>
+
+      <!-- Kiefersfelden -->
+      <h3 style="font-family: var(--font-sans); font-size: 1.2rem; color: var(--ink); margin: 2.5rem 0 1rem; margin-top: 3rem; font-weight: 600;">
+        <i class="fa-solid fa-location-dot" style="color: var(--rose); margin-right: 0.6rem;"></i>
+        In Kiefersfelden
+      </h3>
+      <div class="gc-items">
+        <div class="gc-item">
+          <div class="gc-item-title">Freizeitbad INNsola</div>
+          <p class="gc-item-desc">10 % Rabatt pro Eintritt</p>
+        </div>
+        <div class="gc-item">
+          <div class="gc-item-title">Kieferer Puppentheater</div>
+          <p class="gc-item-desc">0,50 € Rabatt pro Eintritt</p>
+        </div>
+        <div class="gc-item">
+          <div class="gc-item-title">Kieferer Sportstudio</div>
+          <p class="gc-item-desc">Etwa 10 % Rabatt auf Kurse (Fitness, Pilates, Yoga, Gesundheit)</p>
+        </div>
+        <div class="gc-item">
+          <div class="gc-item-title">Outdoor Adventure</div>
+          <p class="gc-item-desc">5 % Rabatt auf Inntal Einsteiger-Tour Canyoning</p>
+        </div>
+        <div class="gc-item">
+          <div class="gc-item-title">Heimatbühne Kiefersfelden</div>
+          <p class="gc-item-desc">0,50 € Rabatt pro Eintritt</p>
+        </div>
+        <div class="gc-item">
+          <div class="gc-item-title">Trampolinpark Jump House</div>
+          <p class="gc-item-desc">3,00 € Rabatt Open Jump (120 min), 1,00 € Rabatt Open Jump (60 min)</p>
+        </div>
+      </div>
+
+      <!-- Umgebung -->
+      <h3 style="font-family: var(--font-sans); font-size: 1.2rem; color: var(--ink); margin: 2.5rem 0 1rem; margin-top: 3rem; font-weight: 600;">
+        <i class="fa-solid fa-compass" style="color: var(--rose); margin-right: 0.6rem;"></i>
+        In der Umgebung (Chiemgau & Alpenland)
+      </h3>
+      <div class="gc-items">
+        <div class="gc-item">
+          <div class="gc-item-title">Chiemgau Therme Bad Endorf</div>
+          <p class="gc-item-desc">10 % Rabatt auf Thermen- und Sauna-Standardtarife sowie die Totes-Meer-Salzgrotte</p>
+        </div>
+        <div class="gc-item">
+          <div class="gc-item-title">Festung Kufstein</div>
+          <p class="gc-item-desc">10 % Rabatt pro Eintritt</p>
+        </div>
+        <div class="gc-item">
+          <div class="gc-item-title">Rariatenzoo Ebbs</div>
+          <p class="gc-item-desc">10 % Rabatt beim Eintritt</p>
+        </div>
+        <div class="gc-item">
+          <div class="gc-item-title">Haflinger Erlebnisewelt Hölenhof</div>
+          <p class="gc-item-desc">Erwachsene 1,00 €, Kinder 0,50 € ermäßigt</p>
+        </div>
+        <div class="gc-item">
+          <div class="gc-item-title">Saliterer-Hof Ebbs</div>
+          <p class="gc-item-desc">0,50 € Rabatt pro Kutschfahrt</p>
+        </div>
+        <div class="gc-item">
+          <div class="gc-item-title">Therme Bad Aibling</div>
+          <p class="gc-item-desc">10 % Rabatt pro Eintritt</p>
+        </div>
+        <div class="gc-item">
+          <div class="gc-item-title">Haus steht Kopf in Terfens</div>
+          <p class="gc-item-desc">10 % Rabatt pro Eintritt</p>
+        </div>
+        <div class="gc-item">
+          <div class="gc-item-title">Wendelstein</div>
+          <p class="gc-item-desc">2,00 € Ermäßigung Zahnradbahn & Seilbahn</p>
+        </div>
+        <div class="gc-item">
+          <div class="gc-item-title">Swarowski Kristallwelten Wattens</div>
+          <p class="gc-item-desc">2,00 € Rabatt beim Eintritt</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Disclaimer -->
+    <div class="gc-disclaimer">
+      <i class="fa-solid fa-circle-info" style="color: var(--rose); margin-right: 0.6rem;"></i>
+      <strong>Wichtig:</strong> Diese Informationen basieren auf dem aktuellen Stand von Juni 2026. Die genauen Leistungen und Rabattsätze können sich ändern. Bitte erkundige dich bei der Tourist-Information Oberaudorf oder bei deinem Gastgeber für die aktuellsten Details.
+    </div>
+
+    <!-- CTA -->
+    <div class="gc-cta">
+      <p style="font-family: var(--font-sans); color: var(--ink); margin-bottom: 1.5rem;">
+        Weitere Informationen und den vollständigen Katalog der Gästekarte erhältst du bei der:
+      </p>
+      <p style="font-family: var(--font-sans); color: var(--ink); font-weight: 600; margin: 0.5rem 0;">
+        Tourist-Information Oberaudorf<br>
+        <a href="tel:+498034306296" style="color: var(--rose); text-decoration: none;">+49 8034 306296</a> |
+        <a href="mailto:info@oberaudorf.de" style="color: var(--rose); text-decoration: none;">info@oberaudorf.de</a>
+      </p>
+      <a href="index.html#gaestekarte" class="gc-cta-btn" style="margin-top: 2rem;">
+        <i class="fa-solid fa-arrow-left"></i> Zur Startseite
+      </a>
+    </div>
+
+  </main>
+
+  <!-- Footer (vereinfacht) -->
+  <footer style="background: var(--ink); color: white; padding: 3rem 0; margin-top: 5rem; text-align: center;">
+    <div class="container">
+      <p style="font-family: var(--font-sans); font-size: 0.9rem; margin: 0;">
+        © 2026 Rosel's Mountain Lodge. Alle Rechte vorbehalten. |
+        <a href="index.html#datenschutz" style="color: rgba(255,255,255,0.7); text-decoration: none;">Datenschutz</a> |
+        <a href="index.html#impressum" style="color: rgba(255,255,255,0.7); text-decoration: none;">Impressum</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script defer src="assets/js/main.js"></script>
+</body>
+</html>

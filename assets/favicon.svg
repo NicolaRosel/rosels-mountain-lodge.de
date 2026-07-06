@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Hintergrund -->
+  <rect width="32" height="32" rx="6" fill="#1E1B18"/>
+  <!-- Bergpeak -->
+  <path d="M16 5 L29 25 H3 Z" fill="#C49A8B"/>
+  <!-- Schneekappe -->
+  <path d="M16 5 L20.5 13 H11.5 Z" fill="#FAFAF8"/>
+</svg>
