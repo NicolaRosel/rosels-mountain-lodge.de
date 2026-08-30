@@ -294,6 +294,13 @@ const loader = document.getElementById('loader');
 window.addEventListener('load', () => {
   initLenis();
 
+  if (!loader) {
+    // Seiten ohne Lade-Overlay (z.B. Rechtstexte, Gästekarte)
+    if (lenis) lenis.start();
+    initScrollReveal();
+    return;
+  }
+
   // Phase 1: inner fades
   setTimeout(() => {
     const inner = loader.querySelector('.loader__inner');
@@ -334,20 +341,22 @@ const cursor         = document.getElementById('cursor');
 const cursorFollower = document.getElementById('cursorFollower');
 let mouseX = 0, mouseY = 0, followerX = 0, followerY = 0;
 
-document.addEventListener('mousemove', (e) => {
-  mouseX = e.clientX;
-  mouseY = e.clientY;
-  cursor.style.left = mouseX + 'px';
-  cursor.style.top  = mouseY + 'px';
-});
+if (cursor && cursorFollower) {
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    cursor.style.left = mouseX + 'px';
+    cursor.style.top  = mouseY + 'px';
+  });
 
-(function animateCursorFollower() {
-  followerX += (mouseX - followerX) * 0.1;
-  followerY += (mouseY - followerY) * 0.1;
-  cursorFollower.style.left = followerX + 'px';
-  cursorFollower.style.top  = followerY + 'px';
-  requestAnimationFrame(animateCursorFollower);
-})();
+  (function animateCursorFollower() {
+    followerX += (mouseX - followerX) * 0.1;
+    followerY += (mouseY - followerY) * 0.1;
+    cursorFollower.style.left = followerX + 'px';
+    cursorFollower.style.top  = followerY + 'px';
+    requestAnimationFrame(animateCursorFollower);
+  })();
+}
 
 document.querySelectorAll('a, button, .apartment__card, .gallery__item, .season__card').forEach(el => {
   el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
