@@ -1936,6 +1936,7 @@ body.cursor-gallery .cursor-follower {
   }
   .gallery__item--tall,
   .gallery__item--wide { grid-column: span 1; grid-row: span 1; }
+  .gallery__item--wide-tablet { grid-column: span 2; }
   .gallery__placeholder { height: 200px; }
 
   .booking__inner { grid-template-columns: 1fr; }
@@ -1959,6 +1960,7 @@ body.cursor-gallery .cursor-follower {
   .hero__card-tagline--long { display: none; }
   .hero__card-tagline--short { display: block; opacity: 1; }
   .gallery__grid { grid-template-columns: 1fr; }
+  .gallery__item--wide-tablet { grid-column: span 1; }
   .testimonials__nav { display: none; }
   .booking__form-wrap { padding: 1.5rem; }
   .amenities__row { grid-template-columns: 1fr; padding: 1.2rem 0; }
