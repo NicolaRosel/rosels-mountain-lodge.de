@@ -368,34 +368,41 @@ const nav        = document.getElementById('nav');
 const navBurger  = document.getElementById('navBurger');
 const mobileMenu = document.getElementById('mobileMenu');
 
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 80);
-}, { passive: true });
+if (nav) {
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 80);
+  }, { passive: true });
+}
 
-navBurger.addEventListener('click', () => {
-  navBurger.classList.toggle('open');
-  mobileMenu.classList.toggle('open');
-  document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
-});
-
-mobileMenu.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    navBurger.classList.remove('open');
-    mobileMenu.classList.remove('open');
-    document.body.style.overflow = '';
+if (navBurger && mobileMenu) {
+  navBurger.addEventListener('click', () => {
+    navBurger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
   });
-});
+
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navBurger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+}
 
 // Smooth anchor scroll (Lenis or native)
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener('click', (e) => {
-    const target = document.querySelector(link.getAttribute('href'));
+    const sel = link.getAttribute('href');
+    if (!sel || sel === '#') return;
+    const target = document.querySelector(sel);
     if (!target) return;
     e.preventDefault();
+    const navH = nav ? nav.offsetHeight : 0;
     if (lenis) {
-      lenis.scrollTo(target, { offset: -(nav.offsetHeight + 20), duration: 1.8 });
+      lenis.scrollTo(target, { offset: -(navH + 20), duration: 1.8 });
     } else {
-      const y = target.getBoundingClientRect().top + window.scrollY - nav.offsetHeight - 20;
+      const y = target.getBoundingClientRect().top + window.scrollY - navH - 20;
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
   });
@@ -495,13 +502,15 @@ startAutoSlide();
 
 // ── BACK TO TOP ───────────────────────────────────────────────────────
 const backToTop = document.getElementById('backToTop');
-window.addEventListener('scroll', () => {
-  backToTop.classList.toggle('visible', window.scrollY > 500);
-}, { passive: true });
-backToTop.addEventListener('click', () => {
-  if (lenis) lenis.scrollTo(0, { duration: 1.6 });
-  else window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+if (backToTop) {
+  window.addEventListener('scroll', () => {
+    backToTop.classList.toggle('visible', window.scrollY > 500);
+  }, { passive: true });
+  backToTop.addEventListener('click', () => {
+    if (lenis) lenis.scrollTo(0, { duration: 1.6 });
+    else window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
 
 // ── HIGHLIGHT BAND ────────────────────────────────────────────────────
 const bandTrack = document.querySelector('.highlight-band__track');
